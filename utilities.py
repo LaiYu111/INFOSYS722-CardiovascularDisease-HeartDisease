@@ -31,10 +31,10 @@ def bar_plot(variables=None, data=None, title="Cardiovascular Disease", xlabel="
     
 
 def generate_CVD_dataset():
-    if os.path.exists('./Dataset/CardiovascularDisease/CVD_unclean.csv'):
+    if os.path.exists('./Database/CardiovascularDisease/CVD_unclean.csv'):
         print("CVD_uncleaned.csv existed.")
     else:
-        cvd_cleaned_data_df = pd.read_csv('./Dataset/CardiovascularDisease/CVD_cleaned.csv')
+        cvd_cleaned_data_df = pd.read_csv('./Database/CardiovascularDisease/CVD_cleaned.csv')
         error_data = {}
         missing_value = np.nan
         row = cvd_cleaned_data_df.shape[0]
@@ -48,7 +48,7 @@ def generate_CVD_dataset():
                     if random.randint(1, 6) == 1:  # 1/6 chance to add a missing value to a target cell
                         cvd_cleaned_data_df.loc[r, key] = missing_value
 
-        cvd_cleaned_data_df.to_csv("./Dataset/CardiovascularDisease/CVD_unclean.csv", index=False)
+        cvd_cleaned_data_df.to_csv("./Database/CardiovascularDisease/CVD_unclean.csv", index=False)
         print("finished")
         
         
@@ -111,13 +111,13 @@ def greenvega_consumption_2_category(greenvega):
         return "Excess greenvega Consumption"
     
 def convert_XPT():
-    if os.path.exists('./Dataset/CardiovascularDisease/CVD_unclean_2021.csv'):
+    if os.path.exists('./Database/CardiovascularDisease/CVD_unclean_2021.csv'):
         print("CVD_unclean_2021.csv existed.")
     else:
-        xpt_file_path = './Dataset/CardiovascularDisease/LLCP2021.XPT'  
+        xpt_file_path = './Database/CardiovascularDisease/LLCP2021.XPT'  
         data = pd.read_sas(xpt_file_path, format='xport')  
     	# Convert to a .csv file  
-        csv_file_path = './Dataset/CardiovascularDisease/CVD_unclean_2021.csv'  
+        csv_file_path = './Database/CardiovascularDisease/CVD_unclean_2021.csv'  
         data.to_csv(csv_file_path, index=False)
         print("Finished")
 
