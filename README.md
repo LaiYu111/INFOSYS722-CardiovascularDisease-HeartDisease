@@ -1,6 +1,11 @@
 # INFOSYS722-CardiovascularDisease-HeartDisease
 
 Recommand using VSCode or Other IDEs which has a better data visulization function to view the .ipynb file. Otherwise the data results are messy around (Hard to read).
+
+Note, Make sure the Database/CardiovascularDisease folder contains "CVD_cleaned.csv","CVD_unclean.csv" and "CVD_unclean_2021.csv". Otherwise the output of my report and your code result have a different values.
+
+Clone this repository might takes a longer time because the size of Database folder is quiet large.
+
 ## Install git large file storage for download the large files
 ```shell
 # ubuntu
@@ -14,3 +19,9 @@ sudo apt-get install git-lfs
 ```shell
 apt install jupyter-core
 ```
+
+## Configure python environment
+```shell
+pip install sklearn
+```
+
