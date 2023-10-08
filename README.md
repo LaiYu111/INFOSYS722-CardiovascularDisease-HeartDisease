@@ -6,6 +6,10 @@ Note, Make sure the Database/CardiovascularDisease folder contains "CVD_cleaned.
 
 Clone this repository might takes a longer time because the size of Database folder is quiet large.
 
+BDAS-Iteration.ipynb for Step 8.5 Iteration
+
+BDAS.ipynb covers Step 1 - Step 8.4
+
 ## Install git large file storage for download the large files
 ```shell
 # ubuntu
