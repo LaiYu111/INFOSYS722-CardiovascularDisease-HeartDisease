@@ -16,6 +16,7 @@ BDAS.ipynb covers Step 1 - Step 8.4
 apt-get update 
 apt-get install git # make sure your pc has git
 
+# install large file storage
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
 ```
